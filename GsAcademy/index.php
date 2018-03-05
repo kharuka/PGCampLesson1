@@ -53,6 +53,19 @@
     </p>
   </div>
 
+  <!-- index -->
+  <div class="index-box">
+    <div class="index-subbox">
+      <h2>目次</h2>
+      <ul style="list-style:none">
+        <li><a href="#course">ジーズアカデミーのコース</a></li>
+        <li><a href="#mentor">メンターについて</a></li>
+        <li><a href="#info">ジーズアカデミーの情報</a></li>
+        <li><a href="#form">ジーズアカデミーへお問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+
   <!-- main -->
   <div class="main-box" id="main-box">
 
@@ -206,7 +219,7 @@
     <h2>お問い合わせ</h2>
     <p>*必須入力</p>
     <div class="">
-      <form class="" action="" method="post">
+      <form class="" action="insert.php" method="post">
 
         <!-- 個人情報 -->
         <fieldset>
@@ -255,37 +268,46 @@
           <div class="form-group">
             <label class="col-sm-4 control-label">ジーズアカデミーを何で知りましたか？（複数選択可）*</label>
             <label class="checkbox-inline">
-              <input type="checkbox" name="acsessroot" value="口コミ">口コミ
+              <input type="checkbox" name="accessroot[]" value="口コミ">口コミ
             </label>
             <label class="checkbox-inline">
-              <input type="checkbox" name="acsessroot" value="SNS">SNS
+              <input type="checkbox" name="accessroot[]" value="SNS">SNS
             </label>
             <label class="checkbox-inline">
-              <input type="checkbox" name="acsessroot" value="検索">検索
+              <input type="checkbox" name="accessroot[]" value="検索">検索
             </label>
             <label class="checkbox-inline">
-              <input type="checkbox" name="acsessroot" value="知人からの紹介">知人からの紹介
+              <input type="checkbox" name="accessroot[]" value="知人からの紹介">知人からの紹介
             </label>
             <label class="checkbox-inline">
-              <input type="checkbox" name="acsessroot" value="その他">その他
+              <input type="checkbox" name="accessroot[]" value="その他">その他
             </label>
           </div>
           <div class="form-group">
             <label class="col-sm-4 control-label">説明会希望日時*</label>
             <div class="col-sm-2">
-              <select name="datetime" class="form-control">
-                <option value="datetime1">2018/4/1 10:00~</option>
-                <option value="datetime2">2018/4/1 11:00~</option>
-                <option value="datetime3">2018/4/2 17:00~</option>
+              <select name="date_time" class="form-control">
+                <option value="2018/4/1 10:00~">2018/4/1 10:00~</option>
+                <option value="2018/4/1 11:00~">2018/4/1 11:00~</option>
+                <option value="2018/4/2 17:00~">2018/4/2 17:00~</option>
               </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label">何か質問事項があればこちらにご記入下さい</label>
+            <div class="col-sm-10">
+              <textarea class="form-control" rows="3" name="textarea" placeholder="質問事項" onfocus="this.placeholder=''" onblur="this.placeholder='質問事項'"></textarea>
             </div>
           </div>
         </fieldset>
 
         <!-- button -->
         <div class="button-box">
-          <!-- <p>ジャンケン　<input type="submit" class="btn-success" value="ポン"></p>
-          <p><input type="reset" class="btn-success" value="リセット"></p> -->
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-primary">送信</button>
+            </div>
+          </div>
         </div>
 
       </form>
